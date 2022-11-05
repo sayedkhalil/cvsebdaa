@@ -197,6 +197,7 @@ const uploadlogo = (e) => {
     const onbirth = (e) => setcv({...cv,birth:e.target.value})
     const onsummary = (e) => setcv({...cv,summary:e.target.value})
     const onmail = (e) => setcv({...cv,email:e.target.value})
+    const onnat  = (e) => setcv({...cv,nat:e.target.value})
      // add skill--------------------------------------------------------------
      const onskill = (e) => setskill({...skill,name:e.target.value})
      const onrange = (e) => { setskill({...skill,range:e.target.value});  }
@@ -396,6 +397,13 @@ crossOrigin="anonymous"></script>
           </div>
           <input type="date" className="form-control" onChange={onbirth}/>
            </div>
+             {/* --------------------------------- */}
+             <div className="input-group mt-3">
+  <        div className="input-group-prepend">
+           <span className="input-group-text c-orange" id="">nationality</span>
+          </div>
+          <input type="text" className="form-control" onChange={onnat}/>
+           </div>
            {/* --------------------------------- */}
            <div className="input-group mt-3">
   <        div className="input-group-prepend">
@@ -446,7 +454,12 @@ crossOrigin="anonymous"></script>
   <        div className="input-group-prepend">
          <span className="input-group-text c-orange" id="">language level</span>
           </div>          
-          <input type="range"onChange={onrangelang} value={lang.range} required className="form-control"/>
+                   <select  onChange={onrangelang} value={lang.range} required className="form-control">
+                   <option value="">select</option>
+              <option value="excellent">excellent</option>
+              <option value="very good">very good</option>
+              <option value=" good"> good</option>
+          </select>
            </div>
            <input className="input-group-text c-orange w-100 tc mt-2 " onSubmit={addlang} type="submit" name="" value={inputlang}/>
             </form>

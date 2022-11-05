@@ -83,7 +83,7 @@ crossOrigin="anonymous"></script>
          {/* avtar */}
          <div className="cont-img">
            <img className="avatar-img" src={cv.pic}></img>
-           <div className="label p-1  bg-light ">
+           <div className="label p-1 ">
          <h5 className="text-dark text-center">{cv.name}</h5>
          <hr className="bg-dark"></hr>
          <h6 className="text-dark text-center">{cv.title}</h6>
@@ -93,7 +93,7 @@ crossOrigin="anonymous"></script>
            <div className="education w-100">
            <img src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/eduction.svg?alt=media&token=8894828b-09b7-41ae-b53d-36d930bfac67" className=" mb-3" alt=""/>
            <div className="w-100 edu">
-             <div className="vr">                  
+             <div >                  
              </div>
            
               {
@@ -101,10 +101,10 @@ crossOrigin="anonymous"></script>
                     <div className="row w-100" key={ cv.edues.indexOf(x)}>
              <div className="col-1 p-2 poi rounded-circle bg-dark">            
              </div>
-             <h5 className="col-3 ">{getyear(x.date)}</h5>
-             <h6 className="text-dark  col-8">{x.deg}</h6>
-             <div className="col-12 ">                 
-               <h6 className="text-dark pl-1">{x.uni}</h6>
+             <h6 className="text-dark  col-12">{x.deg}</h6>
+             <h6 className="text-dark col-12 pl-1">{x.uni}</h6>
+             <h6 className="col-3 ">{getyear(x.date)}</h6>
+             <div className="col-12 ">                
                <p className="text-dark pl-1 fs-6">
               {x.summary}
                </p>
@@ -116,44 +116,60 @@ crossOrigin="anonymous"></script>
 
            </div>
           </div>
+             {/* contact--------------------------------------------------------------------------- */}
+ <div className="row">
+ <img className="col-12 mb-2" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/person.svg?alt=media&token=2be690e1-b140-4b4d-b7f3-c0961f08db57" alt=""/>
+      <div className="contact row  col-12">
+                <div className="row  col-12 cont-item row">
+             <div className="col-2 p-1 borr">
+             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/call.svg?alt=media&token=0d8d3701-72a6-4145-b491-386335a762db" alt=""/>
+             </div>                
+             <h6 className="col-10 p-1">011 456 7137</h6>
+           </div>
+           {/* email */}
+           <div className="row col-12 cont-item row">
+             <div className="col-2 p-1 borr">
+             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/mail.svg?alt=media&token=3e031690-2235-4e8a-b359-9b03c48a58c8" alt=""/>
+             </div>                
+             <h6 className="col-10 p-1">{cv.email}</h6>
+           </div>
+           {/* adress */}
+           <div className="row col-12 cont-item  row">
+             <div className="col-1 p-1 borr">
+             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/loca.svg?alt=media&token=9e753ce6-bf41-433a-9c58-2ea372a99fef" alt=""/>
+             </div>                
+             <h6 className="col-11 p-1">Saudi Arabia – RIYADH </h6>
+           </div>
+          {/* birthday */}
+          <div className="row col-12 cont-item  row">
+             <div className="col-2 p-1 borr">
+             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/birh.svg?alt=media&token=c2c2d263-c8a7-40fd-8d9b-140a42878180" alt=""/>
+             </div>                
+             <h6 className="col-10 p-1">{cv.birth}</h6>
+           </div>
+           
+         </div>
+ </div>
          {/* skills............................................................ */}
          <div className="skills row  p-1 mt-2">
           <img className="col-12 mb-2" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/skills.svg?alt=media&token=1b9a8a61-2d63-4796-8803-a9be173d8eb0" alt=""/>
          {cv.skills.map(x=>( <div className="row w-100" key={cv.skills.indexOf(x)}>
-          <h6 className="col-6 text-dark mt-1">{x.name}</h6>
-          <progress className="col-6 mt-2 text-dark" id="file" value={x.range<90?95:x.range} max="100"> 32% </progress>
-          </div>))}
+         <div className="col-1 p-2 poi rounded-circle bg-dark">            
+             </div>
+          <h6 className="col-11 text-dark mt-1">{x.name}</h6>
+           </div>))}
        </div>
 {/* langue----------------------------------------------------------------------------------- */}
 <div className="langue">
 <img src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/lang.svg?alt=media&token=fe942676-fa20-4507-bfe9-010c8de3425b" alt=""/>
 <div className="row">
 {cv.langs.map(x=>(
-    <div className="col-6  " key={cv.langs.indexOf(x)}>
-    <div className="p-3">
-    <Doughnut data={{
-    labels: [],
-    datasets: [
-     {
-       label: '# of Votes',
-       data: [x.range,100-x.range],
-       backgroundColor: [
-         'rgba(247, 148, 88,1)',
-         'rgba(160, 16, 235, 0)',
-         
-       ],
-       borderColor: [
-         'rgba(255, 99, 132, 0)',
-         'rgba(54, 162, 235, 0)',
-         
-       ],
-       borderWidth: 0,
-     },
-    ],
-    }} />
-    </div>
-     <h5 className="text-center text-dark">{x.name}</h5>
-    </div> 
+   <div className="row w-100" key={cv.langs.indexOf(x)}>
+   <div className="col-1 p-2 poi rounded-circle bg-dark">            
+       </div>
+    <h6 className="col-6 text-dark mt-1">{x.name}</h6>
+    <h6 className="col-5 text-dark mt-1">good</h6>
+     </div>
 ))}
 </div>
 </div>
@@ -166,40 +182,7 @@ crossOrigin="anonymous"></script>
            <p className="p-1">{cv.summary}
          </p>
          </div>
-         {/* contact--------------------------------------------------------------------------- */}
- <div className="row">
-   <div className="col-1"></div>
-   <div className="contact row  col-11">
-           <div className="row  col-6 cont-item row">
-             <div className="col-1 p-1 borr">
-             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/call.svg?alt=media&token=0d8d3701-72a6-4145-b491-386335a762db" alt=""/>
-             </div>                
-             <h6 className="col-11 p-1">011 456 7137</h6>
-           </div>
-           {/* email */}
-           <div className="row col-6 cont-item row">
-             <div className="col-1 p-1 borr">
-             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/mail.svg?alt=media&token=3e031690-2235-4e8a-b359-9b03c48a58c8" alt=""/>
-             </div>                
-             <h6 className="col-11 p-1">{cv.email}</h6>
-           </div>
-           {/* adress */}
-           <div className="row col-6 cont-item  row">
-             <div className="col-1 p-1 borr">
-             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/loca.svg?alt=media&token=9e753ce6-bf41-433a-9c58-2ea372a99fef" alt=""/>
-             </div>                
-             <h6 className="col-11 p-1">Saudi Arabia – RIYADH </h6>
-           </div>
-          {/* birthday */}
-          <div className="row col-6 cont-item  row">
-             <div className="col-1 p-1 borr">
-             <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/birh.svg?alt=media&token=c2c2d263-c8a7-40fd-8d9b-140a42878180" alt=""/>
-             </div>                
-             <h6 className="col-11 p-1">{cv.birth}</h6>
-           </div>
-           
-         </div>
- </div>
+      
  {/* exprienase-------------------------------------------------- */}
  <div className="exprien mt-3">
    <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/work.svg?alt=media&token=4fa51f4c-8f0f-4f12-86d5-9049509db86a" alt=""/>
