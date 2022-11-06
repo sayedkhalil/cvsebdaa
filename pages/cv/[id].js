@@ -91,7 +91,7 @@ crossOrigin="anonymous"></script>
          </div>
            {/* education........................................................... */}
            <div className="education w-100">
-           <img src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/eduction.svg?alt=media&token=8894828b-09b7-41ae-b53d-36d930bfac67" className=" mb-3" alt=""/>
+           <img  src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/eduction.svg?alt=media&token=8894828b-09b7-41ae-b53d-36d930bfac67" className="w-50 mb-3" alt=""/>
            <div className="w-100 edu">
              <div >                  
              </div>
@@ -118,7 +118,7 @@ crossOrigin="anonymous"></script>
           </div>
              {/* contact--------------------------------------------------------------------------- */}
  <div className="row">
- <img className="col-12 mb-2" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/person.svg?alt=media&token=2be690e1-b140-4b4d-b7f3-c0961f08db57" alt=""/>
+ <img className="w-75 mb-2" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/person.svg?alt=media&token=2be690e1-b140-4b4d-b7f3-c0961f08db57" alt=""/>
       <div className="contact row  col-12">
                 <div className="row  col-12 cont-item row">
              <div className="col-2 p-1 borr">
@@ -152,7 +152,7 @@ crossOrigin="anonymous"></script>
  </div>
          {/* skills............................................................ */}
          <div className="skills row  p-1 mt-2">
-          <img className="col-12 mb-2" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/skills.svg?alt=media&token=1b9a8a61-2d63-4796-8803-a9be173d8eb0" alt=""/>
+          <img className="col-6 mb-2" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/skills.svg?alt=media&token=1b9a8a61-2d63-4796-8803-a9be173d8eb0" alt=""/>
          {cv.skills.map(x=>( <div className="row w-100" key={cv.skills.indexOf(x)}>
          <div className="col-1 p-2 poi rounded-circle bg-dark">            
              </div>
@@ -161,7 +161,7 @@ crossOrigin="anonymous"></script>
        </div>
 {/* langue----------------------------------------------------------------------------------- */}
 <div className="langue">
-<img src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/lang.svg?alt=media&token=fe942676-fa20-4507-bfe9-010c8de3425b" alt=""/>
+<img className="w-50 mb-3" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/lang.svg?alt=media&token=fe942676-fa20-4507-bfe9-010c8de3425b" alt=""/>
 <div className="row">
 {cv.langs.map(x=>(
    <div className="row w-100" key={cv.langs.indexOf(x)}>
@@ -178,14 +178,14 @@ crossOrigin="anonymous"></script>
        <div className="col-8 section-2 mt-3">
          {/* summary------------------------------------------------------------------------------------- */}
          <div className="summary p-2">
-           <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/summary.svg?alt=media&token=393a9ca9-6b71-48e6-91cf-257c26bdcbc6" alt=""/>
+           <img className="w-50" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/summary.svg?alt=media&token=393a9ca9-6b71-48e6-91cf-257c26bdcbc6" alt=""/>
            <p className="p-1">{cv.summary}
          </p>
          </div>
       
  {/* exprienase-------------------------------------------------- */}
  <div className="exprien mt-3">
-   <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/work.svg?alt=media&token=4fa51f4c-8f0f-4f12-86d5-9049509db86a" alt=""/>
+   <img className="col-5" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/work.svg?alt=media&token=4fa51f4c-8f0f-4f12-86d5-9049509db86a" alt=""/>
    <div className="education w-100">
                         <div className="w-100 edu">
              <div className="vr">                  
@@ -210,7 +210,7 @@ crossOrigin="anonymous"></script>
  </div>
    {/* certifacate------------------------------------------------------------ */}
    <div className="exprien mt-5">
-   <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/certi.svg?alt=media&token=a6639041-ee76-481d-be99-94b69ef6ad9b" alt=""/>
+   <img className="col-4" src="https://firebasestorage.googleapis.com/v0/b/cvebdaa.appspot.com/o/certi.svg?alt=media&token=a6639041-ee76-481d-be99-94b69ef6ad9b" alt=""/>
    <div className="w-100">
    
      {cv.cers.map(x=>(<div className="work-item w-100 p-2 mt-3 row"key={cv.cers.indexOf(x)}>
